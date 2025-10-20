@@ -610,6 +610,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app.setStyle("Fusion")
     widget = MainWindow()
     widget.show()
     sys.exit(app.exec())
