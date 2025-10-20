@@ -17,13 +17,26 @@ jobs:
 
     - name: Install dependencies
       run: |
-        ls -R
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    
+    - name: Get PySide6 path
+      id: pyside6_path
+      shell: pwsh
+      run: |
+        $pyside_loc = (pip show PySide6).Location
+        echo "pyside_path=$pyside_loc" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
     - name: Run PyInstaller
+      shell: pwsh
       run: |
-        pyinstaller --onefile --windowed --name="EmailGenerator" --collect-all="PySide6" --hidden-import="PySide6.QtGui" --hidden-import="PySide6.QtWidgets" --hidden-import="PySide6.QtCore" --hidden-import="PySide6.QtNetwork" emailgenerator.py
+        pyinstaller --onefile --windowed --name="EmailGenerator" `
+        --add-binary="${{ steps.pyside6_path.outputs.pyside_path }}/PySide6/plugins/styles;PySide6/plugins/styles" `
+        --add-binary="${{ steps.pyside6_path.outputs.pyside_path }}/PySide6/plugins/platforms;PySide6/plugins/platforms" `
+        --hidden-import="PySide6.QtGui" `
+        --hidden-import="PySide6.QtWidgets" `
+        --hidden-import="PySide6.QtCore" `
+        emailgenerator.py
 
     - name: Upload the EXE
       uses: actions/upload-artifact@v4
