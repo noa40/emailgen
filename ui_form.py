@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
@@ -32,11 +32,13 @@ class Ui_MainWindow(object):
         self.program_title.setObjectName(u"program_title")
         self.program_title.setGeometry(QRect(270, 50, 201, 21))
         self.program_title.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.program_title.setStyleSheet(u"color: rgb(0, 0, 0)")
         self.program_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(670, 120, 101, 21))
         self.label.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label.setStyleSheet(u"color: rgb(4, 4, 4)")
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lineEdit = QLineEdit(self.centralwidget)
         self.lineEdit.setObjectName(u"lineEdit")
@@ -45,7 +47,8 @@ class Ui_MainWindow(object):
         self.lineEdit.setStyleSheet(u"background: rgb(255, 255, 255);  \n"
 "border: 2px solid #005A9C;\n"
 "        padding: 10px;         \n"
-"        border-radius: 8px;    ")
+"        border-radius: 8px;    \n"
+"color: rgb(5, 5, 5)")
         self.lineEdit.setLocale(QLocale(QLocale.Hebrew, QLocale.Israel))
         self.comboBox = QComboBox(self.centralwidget)
         self.comboBox.addItem("")
@@ -62,10 +65,12 @@ class Ui_MainWindow(object):
         self.comboBox.setStyleSheet(u"background: rgb(255, 255, 255);  \n"
 "border: 2px solid #005A9C;\n"
 "        padding: 10px;         \n"
-"        border-radius: 8px;    ")
+"        border-radius: 8px;    \n"
+"color: rgb(0, 0, 0)")
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(660, 180, 121, 21))
+        self.label_2.setStyleSheet(u"color: rgb(0, 0, 0)")
         self.label_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.listWidget = QListWidget(self.centralwidget)
         __qlistwidgetitem = QListWidgetItem(self.listWidget)
@@ -101,11 +106,13 @@ class Ui_MainWindow(object):
         self.listWidget.setStyleSheet(u"background: rgb(255, 255, 255);  \n"
 "border: 2px solid #005A9C;\n"
 "        padding: 10px;         \n"
-"        border-radius: 8px;    ")
+"        border-radius: 8px;    \n"
+"color:rgb(0, 0, 0)")
         self.listWidget.setSelectionMode(QAbstractItemView.SelectionMode.MultiSelection)
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(670, 230, 101, 20))
+        self.label_3.setStyleSheet(u"color: rgb(0, 0, 0)")
         self.label_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.pushButton = QPushButton(self.centralwidget)
         self.pushButton.setObjectName(u"pushButton")
@@ -119,15 +126,18 @@ class Ui_MainWindow(object):
         self.textEdit.setStyleSheet(u"background: rgb(255, 255, 255);  \n"
 "border: 2px solid #005A9C;\n"
 "        padding: 10px;         \n"
-"        border-radius: 8px;    ")
+"        border-radius: 8px;    \n"
+"color: rgb(0, 0, 0)")
         self.textEdit.setReadOnly(True)
         self.label_4 = QLabel(self.centralwidget)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(120, 200, 271, 31))
+        self.label_4.setStyleSheet(u"color:rgb(0, 0, 0)")
         self.pushButton_2 = QPushButton(self.centralwidget)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(30, 430, 361, 32))
         self.pushButton_2.setStyleSheet(u"background:rgb(143, 178, 255)\n"
+"\n"
 "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
@@ -147,6 +157,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.program_title.setText(QCoreApplication.translate("MainWindow", u"\u05de\u05d2\u05e0\u05f3\u05e8\u05d8 \u05d4\u05de\u05d9\u05d9\u05dc\u05d9\u05dd \u05e9\u05dc \u05de\u05d5\u05e9\u05dc", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u05e9\u05dd \u05d4\u05de\u05d5\u05e2\u05de\u05d3/\u05ea:", None))
+        self.lineEdit.setText("")
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u05d4\u05d6\u05d9\u05e0\u05d5 \u05d0\u05ea \u05e9\u05dd \u05d4\u05de\u05d5\u05e2\u05de\u05d3/\u05ea...", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"\u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd", None))
         self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"\u05dc\u05d0 \u05d1\u05d8\u05d5\u05d7/\u05d4", None))
@@ -198,4 +209,3 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u05d4\u05de\u05d9\u05d9\u05dc \u05d4\u05de\u05d2\u05f3\u05d5\u05e0\u05e8\u05d8:", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u05d4\u05e2\u05ea\u05e7 \u05d8\u05e7\u05e1\u05d8", None))
     # retranslateUi
-
